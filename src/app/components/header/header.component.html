@@ -1,0 +1,21 @@
+<header class="mainHeader">
+  <div class="logo">
+    <a routerLink="/">
+      <img class="actual-logo" src="logo.webp" alt="Logo AT" />
+    </a>
+    <h1 class="short-logo">AT</h1>
+  </div>
+
+    <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">
+    ☰
+  </button>
+
+  <nav class="navigation" [ngClass]="{ 'active': isMenuOpen }">
+    <ul>
+      <li><a routerLink="/chisiamo">Chi Siamo</a></li>
+      <li><a routerLink="/prodotti">Prodotti</a></li>
+      <li><a routerLink="/design">Design</a></li>
+      <li><a routerLink="/contatti">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
