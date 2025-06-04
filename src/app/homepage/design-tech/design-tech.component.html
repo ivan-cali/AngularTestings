@@ -1,19 +1,55 @@
-<section class="design-section">
-  <h2>Design</h2>
-  <div class="design-content">
-    <div class="design-text">
-      <p>Il design e la tecnologia sono al centro della nostra filosofia. Ogni prodotto è progettato con cura per unire estetica e funzionalità.</p>
-    </div>
-    <img class="design-pic" src="design.webp" alt="Design AT">
-  </div>
-</section>
+<main class="container">
+  <h1 class="main-title mat-display-2">Design &amp; Technology</h1>
 
-<section class="tech-section">
-  <h2>Tecnologia</h2>
-  <div class="design-content">
-    <div class="design-text">
-      <p>Il design e la tecnologia sono al centro della nostra filosofia. Ogni prodotto è progettato con cura per unire estetica e funzionalità.</p>
-    </div>
-    <img class="tech-pic" src="design.webp" alt="Design AT">
-  </div>
-</section>
+  <!-- Design Section -->
+  <section class="section">
+    <mat-card class="section-card">
+      <div class="section-grid">
+        <div class="section-image">
+          <img mat-card-image src="design.webp" alt="Design Illustration" />
+        </div>
+        <div class="section-content">
+          <h2 class="section-title">Design Excellence</h2>
+          <p>
+            Great design is more than just aesthetics. It's about creating experiences that are intuitive, accessible, and delightful. Our design philosophy centers around understanding user needs and crafting solutions that seamlessly blend form and function.
+          </p>
+          <p>
+            From initial concept to final execution, we focus on every detail to ensure that our designs not only look beautiful but also solve real problems. We believe in iterative design processes, user testing, and continuous improvement to create products that truly resonate with people.
+          </p>
+          <mat-chip-listbox>
+            <mat-chip>UI/UX</mat-chip>
+            <mat-chip>Visual Design</mat-chip>
+            <mat-chip>Interaction</mat-chip>
+            <mat-chip>Accessibility</mat-chip>
+          </mat-chip-listbox>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <!-- Technology Section -->
+  <section class="section">
+    <mat-card class="section-card">
+      <div class="section-grid reverse">
+        <div class="section-image">
+          <img mat-card-image src="tech.webp" alt="Technology Illustration" />
+        </div>
+        <div class="section-content">
+          <h2 class="section-title">Cutting-Edge Technology</h2>
+          <p>
+            Technology is the backbone of modern innovation. We leverage the latest advancements in software development, artificial intelligence, and cloud computing to build robust, scalable solutions that stand the test of time.
+          </p>
+          <p>
+            Our technical expertise spans across multiple domains, from front-end frameworks to back-end systems, database architecture to DevOps practices. We're committed to using the right tools for each unique challenge, ensuring optimal performance, security, and maintainability.
+          </p>
+          <mat-chip-listbox>
+            <mat-chip>Web Development</mat-chip>
+            <mat-chip>AI/ML</mat-chip>
+            <mat-chip>Cloud Computing</mat-chip>
+            <mat-chip>DevOps</mat-chip>
+          </mat-chip-listbox>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+</main>

@@ -1,21 +1,46 @@
-<header class="mainHeader">
-  <div class="logo">
-    <a routerLink="/">
-      <img class="actual-logo" src="logo.webp" alt="Logo AT" />
-    </a>
-    <h1 class="short-logo">AT</h1>
-  </div>
-
-    <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">
-    ☰
+<mat-sidenav-container class="sidenav-container">
+  <!-- Mobile Side Nav (from the left) -->
+  <mat-sidenav #sidenav mode="over" position="start" class="mobile-sidenav" >
+  <button mat-icon-button class="close-btn" (click)="sidenav.close()">
+    <mat-icon>close</mat-icon>
   </button>
 
-  <nav class="navigation" [ngClass]="{ 'active': isMenuOpen }">
-    <ul>
-      <li><a routerLink="/chisiamo">Chi Siamo</a></li>
-      <li><a routerLink="/prodotti">Prodotti</a></li>
-      <li><a routerLink="/design">Design</a></li>
-      <li><a routerLink="/contatti">Contatti</a></li>
-    </ul>
-  </nav>
-</header>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="sidenav.close()">Homepage</a>
+      <a mat-list-item routerLink="/chisiamo" (click)="sidenav.close()">Chi Siamo</a>
+      <a mat-list-item routerLink="/prodotti" (click)="sidenav.close()">Prodotti</a>
+      <a mat-list-item routerLink="/design" (click)="sidenav.close()">Design</a>
+      <a mat-list-item routerLink="/contatti" (click)="sidenav.close()">Contatti</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Header -->
+  <header class="mainHeader">
+    <div class="logo">
+      <a routerLink="/">
+        <img class="actual-logo" src="logo.webp" alt="Logo AT" />
+      </a>
+      <h1 class="short-logo">AT</h1>
+    </div>
+
+    <nav class="navigation">
+      <ul>
+        <li><a routerLink="/chisiamo">Chi Siamo</a></li>
+        <li><a routerLink="/prodotti">Prodotti</a></li>
+        <li><a routerLink="/design">Design</a></li>
+        <li><a routerLink="/contatti">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+<button
+  *ngIf="!sidenav.opened"
+  mat-icon-button
+  class="menu-toggle"
+  (click)="toggleSidenav()"
+>
+  <mat-icon>menu</mat-icon>
+</button>
+
+  </header>
+</mat-sidenav-container>

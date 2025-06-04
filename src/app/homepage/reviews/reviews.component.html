@@ -1,0 +1,22 @@
+<section class="testimonials-section mat-elevation-z2">
+  <div class="text-center header">
+    <h2 class="title">What Our Clients Say</h2>
+    <p class="subtitle">Trusted by companies worldwide</p>
+  </div>
+
+  <div class="grid-container">
+    <mat-card *ngFor="let testimonial of testimonials" class="testimonial-card">
+      <div class="stars">
+        <mat-icon *ngFor="let _ of [1,2,3,4,5]" color="warn">star</mat-icon>
+      </div>
+      <blockquote class="quote">“{{ testimonial.text }}”</blockquote>
+      <div class="author">
+        <img [src]="testimonial.image" [alt]="testimonial.name" class="avatar" title="testimonial.name"/>
+        <div>
+          <div class="author-name">{{ testimonial.name }}</div>
+          <div class="author-role">{{ testimonial.role }}</div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>
